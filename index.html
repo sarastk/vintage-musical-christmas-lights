@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Christmas Lights '99 – Musical Light Set</title>
+  <meta name="description" content="A nostalgic recreation of the 1990s musical Christmas lights with the little green controller.">
+  <meta name="theme-color" content="#0b0505">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 4h8v6h-8z' fill='%232c7a32'/%3E%3Cellipse cx='16' cy='19' rx='7' ry='11' fill='%23ff3b2a'/%3E%3Cellipse cx='13.5' cy='16' rx='2' ry='4' fill='%23ffd0c0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="scene" aria-label="Christmas tree with musical lights"></canvas>
+
+  <button id="fsBtn" class="fs-btn" type="button" title="Fullscreen (F)" aria-label="Toggle fullscreen">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+
+  <div id="controller" class="controller" role="group" aria-label="Light set controller">
+    <div class="ctl-inner">
+      <span class="cable-boot left"></span><span class="cable-boot right"></span>
+      <span class="screw tl"></span><span class="screw tr"></span><span class="screw bl"></span><span class="screw br"></span>
+
+      <div class="ctl-head">
+        <div class="brand">
+          <div class="brand-name">JOLLY&#8209;LITE</div>
+          <div class="brand-sub">Music &middot; 8 Function Controller</div>
+        </div>
+        <div class="led-wrap"><span id="led" class="led"></span><span class="tiny">MUSIC</span></div>
+        <div class="grille" aria-hidden="true"></div>
+      </div>
+
+      <div class="lcd-bezel"><canvas id="lcd" class="lcd"></canvas></div>
+
+      <div class="ctl-buttons">
+        <div class="btn-cell">
+          <div class="well"><button id="btnMelody" class="pbtn cream" type="button" title="Next melody (M)" aria-label="Next melody">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17.5a2.5 2.5 0 1 1-2.5-2.5c.9 0 1.6.3 2.5.9V4l10-2v12.5a2.5 2.5 0 1 1-2.5-2.5c.9 0 1.6.3 2.5.9V6.2L9 8z" fill="currentColor"/></svg>
+          </button></div>
+          <label for="btnMelody">MELODY</label>
+        </div>
+        <div class="btn-cell">
+          <div class="well big"><button id="btnPlay" class="pbtn red big" type="button" title="Play / Pause (Space)" aria-label="Play">
+            <svg viewBox="0 0 32 24" aria-hidden="true"><path d="M3 4l10 8-10 8z" fill="currentColor"/><rect x="18" y="4" width="4" height="16" fill="currentColor"/><rect x="25" y="4" width="4" height="16" fill="currentColor"/></svg>
+          </button></div>
+          <label for="btnPlay">PLAY/PAUSE</label>
+        </div>
+        <div class="btn-cell">
+          <div class="well"><button id="btnMode" class="pbtn cream" type="button" title="Next light pattern (L)" aria-label="Next light pattern">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.6" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></g></svg>
+          </button></div>
+          <label for="btnMode">LIGHTS</label>
+        </div>
+      </div>
+
+      <div class="ctl-bottom">
+        <div class="vol">
+          <span class="tiny">VOL</span>
+          <input id="vol" type="range" min="0" max="100" value="60" aria-label="Volume" title="Volume (&uarr; / &darr;)">
+        </div>
+        <div class="switch-wrap">
+          <span class="tiny">AUTO</span>
+          <button id="autoSw" class="slide-switch" type="button" role="switch" aria-checked="true" title="AUTO: play all melodies in turn &middot; HOLD: repeat this melody (A)" aria-label="Automatic melody change"><span class="knob"></span></button>
+          <span class="tiny">HOLD</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/songs.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/lights.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/lcd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
