@@ -1,4 +1,4 @@
-# Christmas Lights '99 – Musical Light Set 🎄
+# Vintage Christmas Lights – Musical Light Set 🎄
 
 A nostalgic, browser-based recreation of those cheap multicoloured musical
 Christmas lights from the late 1990s – the ones with the little green plastic
@@ -69,23 +69,6 @@ Songs live in `js/songs.js` in a tiny text format:
 ---
 
 ## Share it online for free
-
-### Option A – Netlify Drop (easiest, about 2 minutes, no Git)
-
-1. Go to **https://app.netlify.com/drop**
-2. Drag the whole `xmas-lights` folder (the one that contains `index.html`) onto the page.
-3. You get a link like `https://something-random.netlify.app`.
-4. **Sign up (free) and claim the site.** If you don't, Netlify deletes anonymous sites after about an hour. You can also rename the site under *Site configuration → Change site name*.
-
-To update it later, drag the folder onto the site's **Deploys** page again.
-
-### Option B – GitHub Pages (permanent, free)
-
-1. Create a free account at https://github.com and click **New repository**. Give it a name such as `christmas-lights`, make it **Public**, and create it.
-2. On the new repo page, click **uploading an existing file**. Drag in the *contents* of the folder (`index.html`, `README.md`, and the `css` and `js` folders), then click **Commit changes**.
-3. Go to **Settings → Pages**. Under *Build and deployment*, choose **Deploy from a branch**, select branch **main** and folder **/ (root)**, then click **Save**.
-4. After a minute or two your site is live at
-   `https://YOUR-USERNAME.github.io/christmas-lights/`
 
 Send that link to friends and family. It works on phones too.
 
