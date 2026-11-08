@@ -1,4 +1,4 @@
-# Vintage Christmas Lights – Musical Light Set 🎄
+# Vintage Christmas Lights '99 – Musical Light Set 🎄
 
 A nostalgic, browser-based recreation of those cheap multicoloured musical
 Christmas lights from the late 1990s – the ones with the little green plastic
